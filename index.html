@@ -35,6 +35,22 @@
 	 
 function passSection(){
 	
+	function stampLog(data, eventInfo){
+		console.log("data --> " + JSON.stringify(data));
+		console.log("eventInfo --> " + JSON.stringify(eventInfo));
+
+	}	
+
+	
+	
+	lpTag.events.bind({
+		eventName : "*",
+		appName : "*",
+		// appName : "cobrowse",
+		func: stampLog,
+		triggerOnce : false
+	});
+	
 
 
 	
